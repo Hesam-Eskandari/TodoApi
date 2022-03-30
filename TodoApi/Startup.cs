@@ -32,7 +32,7 @@ namespace TodoApi
                 options.AddDefaultPolicy(
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:4200/")
+                        builder.WithOrigins("http://localhost/")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();
                     });
@@ -48,7 +48,7 @@ namespace TodoApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
